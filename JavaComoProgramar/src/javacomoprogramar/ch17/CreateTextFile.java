@@ -36,8 +36,10 @@ public class CreateTextFile {
         System.out.println("Enter account number (>0) "
                 + "first name, last name and balance \n? ");
         
-        while(record.getAccount() != 500){
+        while(input.hasNext()){
             try{
+                if(!input.hasNext())
+                    break;
                 record.setAccount(input.nextInt());
                 record.setFirstName(input.next());
                 record.setLastName(input.next());
