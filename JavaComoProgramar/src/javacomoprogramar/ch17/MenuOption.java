@@ -1,15 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package javacomoprogramar.ch17;
 
 /**
  *
  * @author renan.souza
  */
-public class MenuOption {
+public enum MenuOption {
+    ZERO_BALANCE(1),
+    CREDIT_BALANCE(2),
+    DEBIT_BALANCE(3),
+    END(4);
     
+    private final int value;
+    
+    MenuOption(int valueOption){
+        value = valueOption;
+    }
+    
+    public int getValue(){
+        return value;
+    }
 }
